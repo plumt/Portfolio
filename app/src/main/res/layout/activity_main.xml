@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"></androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/btn_en2ko"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignRight="@+id/view"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/button2"
+        android:foreground="?selectableItemBackground"
+        android:text="영 → 한" />
+
+    <Button
+        android:id="@+id/btn_ko2en"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/view"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button3"
+        android:foreground="?selectableItemBackground"
+        android:text="한 → 영" />
+
+    <LinearLayout
+        android:id="@+id/liner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adView"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+
+            android:background="@drawable/edit"
+            android:gravity="top"
+            android:hint="글자를 입력해 주세요"
+            android:maxLength="500" />
+
+
+        <TextView
+            android:id="@+id/length"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:gravity="right"
+            android:text="0 / 500"
+            android:textSize="10dp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button"
+            android:foreground="?selectableItemBackground"
+            android:text="변환" />
+
+        <TextView
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/text"
+            android:scrollbarSize="1dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0.5dp"
+        android:layout_height="0.5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#00BDBDBD" />
+
+    <ImageView
+        android:id="@+id/delete"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="2dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/copy"
+        android:foreground="?selectableItemBackground"
+        android:scaleType="fitXY"
+        android:src="@drawable/delete" />
+
+    <ImageView
+        android:id="@+id/copy"
+        android:layout_width="22dp"
+        android:layout_height="23dp"
+        android:layout_below="@+id/view"
+        android:layout_alignRight="@id/liner"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/copy" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7669498576619816/3381444910">
+        <!--        ca-app-pub-3940256099942544/6300978111   테스트-->
+        <!--       ca-app-pub-7669498576619816/3381444910    진짜-->
+    </com.google.android.gms.ads.AdView>
+</RelativeLayout>
