@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.e.randomchat"
+    android:versionCode="3"
+    android:versionName="1.2">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".alert.OutRoomActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".alert.SendMailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".alert.SerchPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".profile.MyProfileAlertActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".profile.UserProfileAlertActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".alert.BancedAlertActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".floating.BancedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".floating.DarkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent" />
+        <activity
+            android:name=".chat.RandomMessageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".SnsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent2" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7669498576619816~9354294070" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/notification" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/sky" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

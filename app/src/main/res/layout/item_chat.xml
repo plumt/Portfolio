@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="71dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/chatitem_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/chatitem_titletext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/circle"
+                android:layout_width="5dp"
+                android:layout_height="5dp"
+                android:layout_alignBottom="@id/chatitem_timetext"
+                android:layout_marginRight="7dp"
+                android:layout_marginBottom="3dp"
+                android:layout_toLeftOf="@id/chatitem_timetext"
+                android:background="@drawable/circle"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/chatitem_timetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/chatitem_titletext"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="2dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/chatitem_lasttext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/chatitem_titletext"
+                android:maxLines="2"
+                android:textColor="@android:color/darker_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#E6BDBDBD" />
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "399630424642",
+    "firebase_url": "https://randomchat-9f7ce.firebaseio.com",
+    "project_id": "randomchat-9f7ce",
+    "storage_bucket": "randomchat-9f7ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399630424642:android:f3b630b1c721eeef21ebdb",
+        "android_client_info": {
+          "package_name": "com.e.randomchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399630424642-c4v407dde9mpbc2t9dsbg0osp5oc0q44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTdfI0SNlwzTppu8atPI82Jfdz9Pvs2u0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399630424642-c4v407dde9mpbc2t9dsbg0osp5oc0q44.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
