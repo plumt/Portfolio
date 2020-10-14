@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/logo"
+            android:text="note"
+            android:textColor="@color/black"
+            android:textStyle="italic" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/login_id"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edittext_login"
+        android:hint="이메일을 입력해 주세요 ( 0 / 30 )"
+        android:maxLength="30" />
+
+    <TextView
+        android:id="@+id/text_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="이메일 형식으로 입력해 주세요"
+        android:textColor="#FF0000"
+        android:textSize="10dp"
+        android:visibility="invisible" />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edittext_login"
+        android:hint="패스워드를 입력해 주세요 ( 0 / 20 )"
+        android:inputType="textPassword"
+        android:maxLength="20" />
+
+    <TextView
+        android:id="@+id/password_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="패스워드는 여섯 글자 이상 입력해 주세요"
+        android:textColor="#FF0000"
+        android:textSize="10dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button_login"
+        android:foreground="?selectableItemBackground"
+        android:text="로그인" />
+
+    <Button
+        android:id="@+id/login_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/button_login"
+        android:foreground="?selectableItemBackground"
+        android:text="회원가입" />
+
+    <TextView
+        android:id="@+id/find_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:gravity="right"
+        android:text="비밀번호 설정" />
+
+</LinearLayout>

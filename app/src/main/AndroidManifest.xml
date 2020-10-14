@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.e.note"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".alert.MemoPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".alert.NotePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".alert.SendMailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".alert.SerchPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".alert.DeleteMemoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".MakeMemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".alert.UpdateNoteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".alert.MakeNoteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".NoteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".alert.SignupAlertActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".MemoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7669498576619816~9354294070" />
+    </application>
+
+</manifest>

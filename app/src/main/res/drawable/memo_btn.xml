@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <!-- shadow (밑으로) : 그림자 -->
+            <item android:bottom="0dp">
+                <shape>
+                    <corners android:bottomLeftRadius="12dp" android:bottomRightRadius="12dp" android:topLeftRadius="12dp" android:topRightRadius="12dp" />
+                    <solid android:color="#F3F36C" />
+                    <stroke android:width="15dp" android:color="#00064274" />
+                </shape>
+            </item>
+            <!-- background (위로) -->
+            <item android:top="30dp">
+                <shape>
+                    <solid android:color="#FFFFFF" />
+                    <corners android:bottomLeftRadius="12dp" android:bottomRightRadius="12dp"/>
+                    <stroke android:width="15dp" android:color="#00064274" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>
