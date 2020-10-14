@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    android:orientation="vertical">
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7669498576619816/6924745315">
+        <!--        ca-app-pub-3940256099942544/6300978111   테스트-->
+<!--        ca-app-pub-7669498576619816/6924745315   진짜-->
+    </com.google.android.gms.ads.AdView>
+    <com.prolificinteractive.materialcalendarview.MaterialCalendarView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/adView"
+        app:mcv_selectionColor="#C5C5C5"
+        app:mcv_showOtherDates="defaults" />
+
+
+    <Button
+        android:id="@+id/add_schedule"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@id/calendarView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/room_button"
+        android:foreground="?selectableItemBackground"
+        android:text="일정 생성"
+        android:textSize="10dp" />
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/add_schedule"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#E6BDBDBD" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calender_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line_view" />
+
+</RelativeLayout>

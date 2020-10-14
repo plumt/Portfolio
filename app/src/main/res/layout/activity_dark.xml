@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dark_relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7669498576619816/6924745315">
+        <!--        ca-app-pub-3940256099942544/6300978111   테스트-->
+        <!--        ca-app-pub-7669498576619816/6924745315   진짜-->
+    </com.google.android.gms.ads.AdView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingbutton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingbutton2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#7CFFFFFF"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/logout"
+        app:backgroundTint="#FFFFFF" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingbutton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingbutton1"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#7CFFFFFF"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/myprofile"
+        app:backgroundTint="#FFFFFF" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingbutton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingbutton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#7CFFFFFF"
+        android:foreground="?selectableItemBackground"
+        android:src="@drawable/talk"
+        android:visibility="gone"
+        app:backgroundTint="#FFFFFF" />
+
+
+    <TextView
+        android:id="@+id/logout_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/floatingbutton3"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toLeftOf="@id/floatingbutton3"
+        android:text="로그 아웃"
+        android:textColor="#B3FFFFFF"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/talk_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/floatingbutton2"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toLeftOf="@id/floatingbutton2"
+        android:text="정보 수정"
+        android:textColor="#B3FFFFFF"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/delete_room_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/floatingbutton1"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_toLeftOf="@id/floatingbutton1"
+        android:text="전체 채팅"
+        android:textColor="#B3FFFFFF"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="60dp"
+        android:background="#7C98C2E6"
+        android:src="@drawable/add"
+        app:backgroundTint="#98C2E6" />
+
+
+</RelativeLayout>
