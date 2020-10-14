@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    tools:context=".myNovel.BookListActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:background="#86B2D8"
+        android:gravity="center"
+        android:maxLines="2"
+        android:paddingLeft="50dp"
+        android:paddingRight="50dp"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="3dp"
+        android:background="@drawable/round_layout">
+
+        <TextView
+            android:id="@+id/weektxt"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:text="연재 주기"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/mon"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/weektxt"
+            android:background="@drawable/text_round1"
+            android:text="월"
+            android:textColor="@color/transparent3"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tue"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/mon"
+            android:background="@drawable/text_round1"
+            android:text="화"
+            android:textColor="@color/transparent3"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/wed"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/tue"
+            android:background="@drawable/text_round1"
+            android:text="수"
+            android:textColor="@color/transparent3"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/thu"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/wed"
+            android:background="@drawable/text_round1"
+            android:text="목"
+            android:textColor="@color/transparent3"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/fri"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/thu"
+            android:background="@drawable/text_round1"
+            android:text="금"
+            android:textColor="@color/transparent3"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/sat"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/fri"
+            android:background="@drawable/text_round1"
+            android:text="토"
+            android:textColor="@color/transparent3"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/sun"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/sat"
+            android:background="@drawable/text_round1"
+            android:text="일"
+            android:textColor="@color/transparent3"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/random"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/sun"
+            android:background="@drawable/text_round1"
+            android:text="자유"
+            android:textColor="@color/transparent3"
+            android:textSize="13dp" />
+
+
+        <TextView
+            android:id="@+id/novel_comment_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weektxt"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="11dp"
+            android:text="작품 소개"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/novel_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/weektxt"
+            android:layout_margin="13dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/novel_comment_txt"
+            android:maxLength="100"
+            android:maxLines="4"
+            android:scrollbarSize="1dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/adView"
+        android:layout_below="@id/relative" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="3dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7669498576619816/6768798224">
+        <!--        ca-app-pub-3940256099942544/6300978111   테스트-->
+        <!--        ca-app-pub-7669498576619816/6768798224      진짜-->
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

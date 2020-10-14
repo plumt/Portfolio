@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.e.novel">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Alert.SendMailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".Alert.SerchPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".Alert.MyProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".Navigation.FanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Navigation.LikeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Navigation.MyLibraryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SerchNovels.MoreNovelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SerchNovels.SerchNovelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SerchNovels.MoreWriterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Mail.BancedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Mail.MailViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".Navigation.MyMailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Alert.WriterProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".Book.BookViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Book.SelectNovelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Category.CategoryActivty"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myNovel.PublishActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myNovel.NowNovelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myNovel.FinishNovelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Alert.CreateNovelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyDialogTheme" />
+        <activity
+            android:name=".Navigation.MyPageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".User.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".User.SignupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".myNovel.BookListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7669498576619816~2712670583" />
+    </application>
+
+</manifest>

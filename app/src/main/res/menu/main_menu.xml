@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/profile"
+            android:icon="@drawable/myprofile"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="회원정보"
+            />
+        <item
+            android:id="@+id/library"
+            android:icon="@drawable/library"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="내 책장"
+            />
+        <item
+            android:id="@+id/writer"
+            android:icon="@drawable/profile"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="작가 페이지"
+            />
+        <item
+            android:id="@+id/memo"
+            android:icon="@drawable/mail"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="쪽지함"
+            />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:title="로그아웃"
+            />
+    </group>
+</menu>

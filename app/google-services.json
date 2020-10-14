@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1048011727014",
+    "firebase_url": "https://novel-52026.firebaseio.com",
+    "project_id": "novel-52026",
+    "storage_bucket": "novel-52026.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1048011727014:android:ee96507ed383b3aabe5467",
+        "android_client_info": {
+          "package_name": "com.e.novel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1048011727014-hpupmq7iji5u0v6e0vtk5r9vpmt7of14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIZyr9AtLQdIHzb95kBLCo0wbCsR1fmQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1048011727014-hpupmq7iji5u0v6e0vtk5r9vpmt7of14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

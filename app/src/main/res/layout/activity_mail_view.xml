@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#86B2D8"
+        android:gravity="center"
+        android:text="쪽지"
+        android:textColor="#ffffff"
+        android:textSize="18dp" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:maxLines="2"
+            android:scrollbarSize="0.8dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical"
+            android:textSize="13dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/massage_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/textview_round1"
+            android:maxLines="10"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:scrollbarSize="0.8dp"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/mail_warning"
+            android:layout_marginTop="25dp"
+            android:background="#E6BDBDBD" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/delete_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="#00FFFFFF"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="삭제"
+                android:textColor="#86B2D8"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#E6BDBDBD" />
+
+            <Button
+                android:id="@+id/bance_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="#00FFFFFF"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="차단"
+                android:textColor="#86B2D8"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#E6BDBDBD" />
+
+            <Button
+                android:id="@+id/answer_btn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.33"
+                android:background="#00FFFFFF"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="답장"
+                android:textColor="#86B2D8"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/mail_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edittext_login"
+            android:gravity="center"
+            android:hint="제목을 입력해 주세요"
+            android:maxLength="20"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/title_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mail_title"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="제목은 한 글자 이상 입력해주세요"
+            android:textColor="#FF0000"
+            android:textSize="10dp"
+            android:visibility="invisible" />
+
+
+        <EditText
+            android:id="@+id/mail_comment"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@id/title_warning"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/edittext_login"
+            android:gravity="center"
+            android:hint="내용을 입력해 주세요"
+            android:maxLength="100"
+            android:maxLines="3" />
+
+        <TextView
+            android:id="@+id/mail_warning"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mail_comment"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="내용은 한 글자 이상 입력해주세요"
+            android:textColor="#FF0000"
+            android:textSize="10dp"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/mail_warning"
+            android:layout_marginTop="25dp"
+            android:background="#E6BDBDBD" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/cancle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#00FFFFFF"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="취소"
+                android:textColor="#86B2D8"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="#E6BDBDBD" />
+
+            <Button
+                android:id="@+id/result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="#00FFFFFF"
+                android:foreground="?selectableItemBackground"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="확인"
+                android:textColor="#86B2D8"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

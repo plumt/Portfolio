@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    tools:context=".Alert.CreateNovelActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:layout_alignParentTop="true"
+        android:background="#86B2D8"
+        android:gravity="center"
+        android:text="새 작품 등록"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_lock"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp"
+        android:background="@drawable/lock_close" />
+
+    <com.kyleduo.switchbutton.SwitchButton
+        android:id="@+id/sawtooth"
+        style="@style/SwitchButtonStyle"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="12dp"
+        android:background="#86B2D8"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:visibility="invisible"
+        app:kswTextOff="연재"
+        app:kswTextOn="완결"
+        app:kswTintColor="#008EFF" />
+
+
+    <EditText
+        android:id="@+id/novel_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/title"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edittext_login"
+        android:gravity="center"
+        android:hint="제목을 입력해 주세요"
+        android:maxLength="30"
+        android:singleLine="true" />
+
+    <TextView
+        android:id="@+id/text_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/novel_name"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="제목은 한 글자 이상 입력해주세요"
+        android:textColor="#FF0000"
+        android:textSize="10dp"
+        android:visibility="invisible" />
+
+
+    <EditText
+        android:id="@+id/novel_comment"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/text_warning"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/edittext_login"
+        android:gravity="center"
+        android:hint="작품 소개를 입력해 주세요"
+        android:maxLength="100"
+        android:maxLines="3" />
+
+    <TextView
+        android:id="@+id/comment_warning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/novel_comment"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="작품 소개는 한 글자 이상 입력해주세요"
+        android:textColor="#FF0000"
+        android:textSize="10dp"
+        android:visibility="invisible" />
+
+
+    <LinearLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment_warning"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/textview_round2"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mon"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/text_round1"
+            android:text="월"
+            android:textColor="@color/transparent3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/tue"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/text_round1"
+            android:text="화"
+            android:textColor="@color/transparent3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/wed"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/text_round1"
+            android:text="수"
+            android:textColor="@color/transparent3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/thu"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/text_round1"
+            android:text="목"
+            android:textColor="@color/transparent3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/fri"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/text_round1"
+            android:text="금"
+            android:textColor="@color/transparent3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/sat"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/text_round1"
+            android:text="토"
+            android:textColor="@color/transparent3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/sun"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/text_round1"
+            android:text="일"
+            android:textColor="@color/transparent3"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/random"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+            android:background="@drawable/text_round1"
+            android:text="자유"
+            android:textColor="@color/transparent3"
+            android:textSize="14dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/weektxt"
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/comment_warning"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="#F3F1F1"
+        android:gravity="center"
+        android:text="연재 주기"
+        android:textSize="15dp" />
+
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relative2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/textview_round2">
+
+        <Button
+            android:id="@+id/sf"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button1"
+            android:tag="sf"
+            android:text="SF" />
+
+        <Button
+            android:id="@+id/fantasy"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/sf"
+            android:background="@drawable/button1"
+            android:tag="fantasy"
+            android:text="판타지" />
+
+        <Button
+            android:id="@+id/game"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/sf"
+            android:background="@drawable/button1"
+            android:tag="game"
+            android:text="게임" />
+
+        <Button
+            android:id="@+id/detective"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/sf"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/button1"
+            android:tag="detective"
+            android:text="추리" />
+
+        <Button
+            android:id="@+id/drama"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/sf"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/sf"
+            android:background="@drawable/button1"
+            android:tag="drama"
+            android:text="드라마" />
+
+        <Button
+            android:id="@+id/mystery"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/sf"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/sf"
+            android:background="@drawable/button1"
+            android:tag="mystery"
+            android:text="미스테리" />
+
+        <Button
+            android:id="@+id/romance"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/detective"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/button1"
+            android:tag="romance"
+            android:text="로맨스" />
+
+        <Button
+            android:id="@+id/heroism"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/detective"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/sf"
+            android:background="@drawable/button1"
+            android:tag="heroism"
+            android:text="무협" />
+
+        <Button
+            android:id="@+id/comic"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/detective"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/sf"
+            android:background="@drawable/button1"
+            android:tag="comic"
+            android:text="개그" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relative2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="#F3F1F1"
+        android:gravity="center"
+        android:text="장르" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/relative1"
+        android:layout_marginTop="30dp"
+        android:background="#E6BDBDBD" />
+
+    <Button
+        android:id="@+id/create_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:background="#00FFFFFF"
+        android:foreground="?selectableItemBackground"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="등록"
+        android:textColor="#86B2D8"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:weightSum="1">
+
+        <Button
+            android:id="@+id/delete_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="#00FFFFFF"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="삭제"
+            android:textColor="#86B2D8"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#E6BDBDBD" />
+
+        <Button
+            android:id="@+id/update_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:background="#00FFFFFF"
+            android:foreground="?selectableItemBackground"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="확인"
+            android:textColor="#86B2D8"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

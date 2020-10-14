@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <EditText
+            android:id="@+id/serch_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/my_toolbar"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="3dp"
+            android:paddingRight="30dp"
+            android:background="@drawable/memo_edit"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:visibility="invisible">
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/x"
+            android:visibility="invisible"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignTop="@id/serch_edit"
+            android:layout_alignRight="@id/serch_edit"
+            android:src="@drawable/x"
+            android:layout_width="15dp"
+            android:layout_height="15dp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/adView"
+            android:layout_below="@id/my_toolbar"
+            android:paddingTop="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+                    android:id="@+id/new_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.85"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="&lt; 최신 등록 작품 &gt;" />
+
+                    <TextView
+                        android:id="@+id/new_more"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.15"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:text="더보기"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/liner2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/new_txt"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalscrollview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/liner1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/like_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/liner2"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.85"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="&lt; 최다 좋아요 작품 &gt;" />
+
+                    <TextView
+                        android:id="@+id/like_more"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.15"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+
+                        android:text="더보기"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/liner4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/like_txt"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalscrollview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/liner3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/view_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/liner4"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.85"
+                        android:gravity="left"
+                        android:paddingLeft="10dp"
+                        android:text="&lt; 최다 조회수 작품 &gt;" />
+
+                    <TextView
+                        android:id="@+id/view_more"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.15"
+                        android:foreground="?selectableItemBackground"
+                        android:gravity="center"
+                        android:text="더보기"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/liner6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_txt"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalscrollview3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp">
+
+                        <LinearLayout
+                            android:id="@+id/liner5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingBottom="5dp" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/liner6"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/textview_round2">
+
+
+                        <Button
+                            android:id="@+id/fantasy"
+                            android:tag="fantasy"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toLeftOf="@id/sf"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:gravity="center"
+                            android:text="   판타지\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:id="@+id/sf"
+                            android:tag="sf"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:text="    SF\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:tag="game"
+                            android:id="@+id/game"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toRightOf="@+id/sf"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:text="    게임\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:tag="drama"
+                            android:id="@+id/drama"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_below="@id/sf"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toLeftOf="@id/detective"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:text="    드라마\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:tag="detective"
+                            android:id="@+id/detective"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_below="@id/sf"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:text="    추리\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:tag="mystery"
+                            android:id="@+id/mystery"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_below="@id/sf"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_toRightOf="@+id/detective"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:text="   미스테리\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:tag="heroism"
+                            android:id="@+id/heroism"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_below="@id/detective"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toLeftOf="@id/romance"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:text="   무협\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:tag="romance"
+                            android:id="@+id/romance"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_below="@id/detective"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:text="    로맨스\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:tag="comic"
+                            android:id="@+id/comic"
+                            android:layout_width="110dp"
+                            android:layout_height="130dp"
+                            android:layout_below="@id/detective"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_toRightOf="@+id/romance"
+                            android:background="@drawable/book"
+                            android:foreground="?selectableItemBackground"
+                            android:text="    개그\n\n\n\n\n"
+                            android:textColor="@color/white"
+                            android:textSize="12dp" />
+
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/category_txt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/liner6"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:background="#F3F1F1"
+                        android:gravity="center"
+                        android:text="카테고리" />
+
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:background="#F3F1F1"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-7669498576619816/6768798224">
+            <!--        ca-app-pub-3940256099942544/6300978111   테스트-->
+            <!--        ca-app-pub-7669498576619816/6768798224      진짜-->
+        </com.google.android.gms.ads.AdView>
+
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#F3F1F1"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/activity_drawer"
+        app:menu="@menu/main_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

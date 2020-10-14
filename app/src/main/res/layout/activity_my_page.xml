@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    android:orientation="vertical"
+    tools:context=".Navigation.MyPageActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:background="#86B2D8"
+        android:gravity="center"
+        android:text="작가 페이지"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/relative1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/insert_writer"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="아직 작가 등록을 하지 않으셨습니다\n\n등록하시겠습니까?" />
+
+        <Button
+            android:id="@+id/insert_writer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button1"
+            android:foreground="?selectableItemBackground"
+            android:text="등록하기" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relative2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="#00BDBDBD" />
+
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_image"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:maxLines="1"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/profile_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:maxLines="1" />
+
+
+        <ImageView
+            android:id="@+id/like_image"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/profile_comment"
+            android:layout_marginTop="34dp"
+            android:layout_toLeftOf="@id/like_txt"
+            android:src="@drawable/heart" />
+
+        <TextView
+            android:id="@+id/like_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/profile_comment"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/view"
+            android:gravity="center"
+            android:text="0개"
+            android:textSize="13dp" />
+
+
+        <ImageView
+            android:id="@+id/fan_image"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_below="@id/profile_comment"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="5dp"
+            android:layout_toRightOf="@id/view"
+            android:src="@drawable/people" />
+
+        <TextView
+            android:id="@+id/fan_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/profile_comment"
+            android:layout_marginLeft="2dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/fan_image"
+            android:gravity="center"
+            android:text="0명"
+            android:textSize="13dp" />
+
+
+        <ImageView
+            android:id="@+id/view_image"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_below="@id/fan_txt"
+            android:layout_marginTop="11dp"
+            android:layout_toLeftOf="@id/view_txt"
+            android:src="@drawable/eyes" />
+
+        <TextView
+            android:id="@+id/view_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_below="@id/fan_txt"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/view"
+            android:gravity="center"
+            android:text="0회"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/mail_image"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_alignTop="@id/view_image"
+            android:layout_marginTop="1dp"
+            android:layout_toRightOf="@id/view"
+            android:src="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/mail_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:layout_alignTop="@id/mail_image"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_toRightOf="@id/mail_image"
+            android:text="0개" />
+
+        <Button
+            android:id="@+id/btn_now_novel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/view_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button1"
+            android:foreground="?selectableItemBackground"
+            android:text="연재 작품 ( 0개 )" />
+
+        <Button
+            android:id="@+id/btn_finish_novel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/btn_now_novel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/button1"
+            android:foreground="?selectableItemBackground"
+            android:text="완결 작품 ( 0개 )" />
+
+    </RelativeLayout>
+
+</LinearLayout>
