@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3F1F1"
+    android:orientation="vertical">
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7669498576619816/7713807719">
+        <!--        ca-app-pub-3940256099942544/6300978111    테스트-->
+        <!--        ca-app-pub-7669498576619816/7713807719      진짜-->
+
+
+    </com.google.android.gms.ads.AdView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatfragment_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp" />
+</LinearLayout>
